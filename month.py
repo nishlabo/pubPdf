@@ -1,5 +1,5 @@
 import sys
-import PubPdf
+from pubPdf import PubPdf
 import argparse
 import datetime
 
