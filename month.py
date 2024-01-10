@@ -3,7 +3,7 @@ from pubPdf import PubPdf
 import argparse
 import datetime
 
-def makeDay(page, r, yr，mt，dy):
+def makeDay(page, r, yr, mt, dy):
 		r.drawAround(page)
 		r.devide(0, 2, 2).drawStr(page, f"{dy}")
 
