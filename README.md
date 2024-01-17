@@ -6,9 +6,9 @@
 
 こんな感じで
 ```test
-from pubPdf import *
-p=pubPdf.PubBuilder("1.pdf")
-r=PubPdf.Rct().shrink(20,20,20,20)
+from pubPdf.pubPdf import *
+p=PubBuilder("1.pdf")
+r=Rct().shrink(20,20,20,20)
 r.drawAround(p.pg)
 r.devide(12,1,32).drawStr(p.pg, "ABC")
 p.save()
