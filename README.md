@@ -17,3 +17,5 @@ exit()
 
 これはさすがにダメかも
 218行目 JFONT = r"C:\Windows\Fonts\yumin.ttf"
+バージョン等の関係でDockerのpythonで使っているときは
+sed -i -e "s/C:\\\Windows\\\Fonts\\\yumin.ttf/\/usr\/share\/fonts\/opentype\/ipafont-mincho\/ipam.ttf/" /usr/local/lib/python3.12/site-packages/pubPdf/pubPdf.py
