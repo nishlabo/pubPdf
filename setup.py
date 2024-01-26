@@ -8,5 +8,5 @@ setup(
     author_email='n.ishiharajp@gmail.com',
     description='Description of my package',
     packages=find_packages(),    
-    install_requires=['reportlab', 'svglib'],
+    install_requires=['reportlab', 'svglib', 'requests'],
 )
