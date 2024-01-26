@@ -21,6 +21,12 @@ import unicodedata
 import argparse
 import math
 import datetime
+import requests
+import io
+from zipfile import ZipFile
+import tempfile
+
+
 
 class Rct:
     """
@@ -216,6 +222,13 @@ class PubBuilder():
     """
     pg = None
     JFONT = r"C:\Windows\Fonts\yumin.ttf"
+    if not os.path.exists(JFONT):
+        response = requests.get("https://moji.or.jp/wp-content/ipafont/IPAfont/ipamp00303.zip")
+        zip_data = io.BytesIO(response.content)
+        with ZipFile(zip_data, 'r') as zip_ref:
+            zip_ref.extract('ipamp00303/ipamp.ttf', tempfile.gettempdir())
+        JFONT = os.path.join(tempfile.gettempdir(),'ipamp00303/ipamp.ttf')
+
     def __init__(self, file="p.pdf", title="test", author="auth", subject="subj", isLandscape=False) :
         if isLandscape:
             self.pg = canvas.Canvas(file, pagesize=landscape(A4))
