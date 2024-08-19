@@ -1,1 +1,1 @@
-frompubPdf import *
+from pubPdf import *
